@@ -1,7 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    //預設的Title
+    //<title>@ViewData["Title"] - TallyApp</title>
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <script src="https://unpkg.com/element-plus"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../wwwroot/css/index.css">
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.min.js"></script>
+    <title>TallyApp</title>
+  </head>
+  <body>
+    <div id="app">
+        <my-component></my-component>
+      <button type="button" class="btn btn-success"  v-on:click="save">儲存</button>
+      <el-button>{{ message }}</el-button>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+    <script src="~/js/index.js" asp-append-version="true"></script>
+  </body>
+</html>
